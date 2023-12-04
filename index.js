@@ -10,10 +10,16 @@ const responder = (req, res, params) => {
 const routes = {
   GET: {
     "/": (req, res) => {
-      responder(req, res, `<h1>Get Method => path /</h1> `);
+      const filePath = __dirname + "/";
+      responder(req, res, filePath);
     },
-    "/home": (req, res) => {
-      responder(req, res, `<h1>Get Method => path /home</h1> `);
+    "/index.html": (req, res) => {
+      const filePath = __dirname + "/index.html";
+      responder(req, res, filePath);
+    },
+    "/about.html": (req, res) => {
+      const filePath = __dirname + "/about.html";
+      responder(req, res, filePath);
     },
   },
   POST: {
